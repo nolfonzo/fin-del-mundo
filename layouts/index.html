@@ -214,7 +214,26 @@
 
   <footer>Puerto Montt → Ushuaia, December 2014 – February 2015</footer>
 
-  <a id="translate-btn" href="https://nolfonzo-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en" target="_blank">🌐 Ver en Español</a>
+  <div id="google_translate_element" style="display:none"></div>
+  <button id="translate-btn" onclick="translateToSpanish()">🌐 Ver en Español</button>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'es',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    function translateToSpanish() {
+      var combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        combo.value = 'es';
+        combo.dispatchEvent(new Event('change'));
+      }
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
