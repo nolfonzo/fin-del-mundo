@@ -1,0 +1,28 @@
+baseURL = "https://nolfonzo.com/"
+languageCode = "en-us"
+title = "Fin del Mundo"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  description = "Cycling 2500km from Puerto Montt to Ushuaia"
+  author = "nolfonzo"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  cover.linkFullImages = true
+
+[params.homeInfoParams]
+  Title = "Puerto Montt to Ushuaia"
+  Content = "For 6 weeks from December 2014 to February 2015, I cycled 2500 kms from Puerto Montt to Ushuaia along the Carretera Austral."
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
