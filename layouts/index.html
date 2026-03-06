@@ -163,6 +163,31 @@
       color: #555;
       font-size: 0.85rem;
     }
+
+    #translate-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #c9a84c;
+      color: #1a1a1a;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 24px;
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    #google_translate_element {
+      position: fixed;
+      bottom: 64px;
+      right: 24px;
+      z-index: 1000;
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -194,6 +219,19 @@
   </div>
 
   <footer>Puerto Montt → Ushuaia, December 2014 – February 2015</footer>
+
+  <button id="translate-btn" onclick="document.getElementById('google_translate_element').style.display='block'">🌐 Translate</button>
+  <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
