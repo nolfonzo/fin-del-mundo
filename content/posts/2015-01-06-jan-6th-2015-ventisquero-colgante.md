@@ -1,5 +1,5 @@
 ---
-title: "Jan 6th, 2015 - Ventisquero Colgante"
+title: "Ventisquero Colgante"
 date: 2015-01-06
 ---
 

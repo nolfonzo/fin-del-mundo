@@ -1,5 +1,5 @@
 ---
-title: "Jan 27th, 2015 - Villa O'Higgins"
+title: "Villa O'Higgins"
 date: 2015-01-27
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Jan 15th, 2015 - Chile Chico"
+title: "Chile Chico"
 date: 2015-01-15
 ---
 

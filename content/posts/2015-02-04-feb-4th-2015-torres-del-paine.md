@@ -1,5 +1,5 @@
 ---
-title: "Feb 4th, 2015 - Torres Del Paine"
+title: "Torres Del Paine"
 date: 2015-02-04
 ---
 

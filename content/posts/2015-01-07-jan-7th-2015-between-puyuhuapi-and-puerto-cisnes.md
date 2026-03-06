@@ -1,5 +1,5 @@
 ---
-title: "Jan 7th, 2015 - Between Puyuhuapi and Puerto Cisnes"
+title: "Between Puyuhuapi and Puerto Cisnes"
 date: 2015-01-07
 ---
 

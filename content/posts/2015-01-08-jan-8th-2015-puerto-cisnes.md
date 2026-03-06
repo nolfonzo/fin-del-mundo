@@ -1,5 +1,5 @@
 ---
-title: "Jan 8th, 2015 - Puerto Cisnes"
+title: "Puerto Cisnes"
 date: 2015-01-08
 ---
 

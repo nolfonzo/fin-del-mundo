@@ -1,5 +1,5 @@
 ---
-title: "Feb 6th, 2015 - The Magellan Strait"
+title: "The Magellan Strait"
 date: 2015-02-06
 ---
 

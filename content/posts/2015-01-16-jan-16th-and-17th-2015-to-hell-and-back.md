@@ -1,5 +1,5 @@
 ---
-title: "Jan 16th and 17th, 2015 - To Hell and Back"
+title: "To Hell and Back"
 date: 2015-01-16
 ---
 

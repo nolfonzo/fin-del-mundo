@@ -1,5 +1,5 @@
 ---
-title: "Dec 29th, 2014 - Puerto Varas to Ralun"
+title: "Puerto Varas to Ralun"
 date: 2014-12-29
 ---
 

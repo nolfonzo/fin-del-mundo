@@ -1,5 +1,5 @@
 ---
-title: "Dec 31st, 2014 - Hornopiren"
+title: "Hornopiren"
 date: 2014-12-31
 ---
 

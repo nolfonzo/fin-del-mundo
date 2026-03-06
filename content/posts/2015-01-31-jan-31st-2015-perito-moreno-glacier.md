@@ -1,5 +1,5 @@
 ---
-title: "Jan 31st, 2015 - Perito Moreno Glacier"
+title: "Perito Moreno Glacier"
 date: 2015-01-31
 ---
 

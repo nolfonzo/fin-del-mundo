@@ -1,5 +1,5 @@
 ---
-title: "Jan 3rd, 2015 - Santa Lucia"
+title: "Santa Lucia"
 date: 2015-01-03
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Jan 1st, 2015 - Caleta Gonzalo"
+title: "Caleta Gonzalo"
 date: 2015-01-01
 ---
 

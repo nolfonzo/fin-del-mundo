@@ -1,5 +1,5 @@
 ---
-title: "Jan 14th, 2015 - Laguna Chiguay"
+title: "Laguna Chiguay"
 date: 2015-01-14
 ---
 

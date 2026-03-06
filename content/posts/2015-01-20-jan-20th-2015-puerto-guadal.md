@@ -1,5 +1,5 @@
 ---
-title: "Jan 20th, 2015 - Puerto Guadal"
+title: "Puerto Guadal"
 date: 2015-01-20
 ---
 

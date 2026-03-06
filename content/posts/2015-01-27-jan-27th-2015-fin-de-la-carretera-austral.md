@@ -1,5 +1,5 @@
 ---
-title: "Jan 27th, 2015 - Fin de la Carretera Austral"
+title: "Fin de la Carretera Austral"
 date: 2015-01-27
 ---
 

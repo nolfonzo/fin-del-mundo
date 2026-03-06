@@ -1,5 +1,5 @@
 ---
-title: "Jan 22nd and 23rd, 2015 - Caleta Tortel"
+title: "Caleta Tortel"
 date: 2015-01-22
 ---
 

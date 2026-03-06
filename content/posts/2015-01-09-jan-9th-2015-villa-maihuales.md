@@ -1,5 +1,5 @@
 ---
-title: "Jan 9th, 2015 - Villa Mañihuales"
+title: "Villa Mañihuales"
 date: 2015-01-09
 ---
 

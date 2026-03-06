@@ -1,5 +1,5 @@
 ---
-title: "Jan 19th, 2015 - Mallin Grande"
+title: "Mallin Grande"
 date: 2015-01-19
 ---
 

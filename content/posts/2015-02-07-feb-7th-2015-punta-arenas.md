@@ -1,5 +1,5 @@
 ---
-title: "Feb 7th, 2015 - Punta Arenas"
+title: "Punta Arenas"
 date: 2015-02-07
 ---
 

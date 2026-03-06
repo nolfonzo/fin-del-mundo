@@ -1,5 +1,5 @@
 ---
-title: "Dec 26th 2014 - Flying into Temuco"
+title: "Flying into Temuco"
 date: 2014-12-26
 ---
 

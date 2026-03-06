@@ -1,5 +1,5 @@
 ---
-title: "Feb 8th, 9th and 10th, 2015 - Tolhuin, Argentina"
+title: "Tolhuin, Argentina"
 date: 2015-02-08
 ---
 

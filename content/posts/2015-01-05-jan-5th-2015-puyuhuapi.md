@@ -1,5 +1,5 @@
 ---
-title: "Jan 5th, 2015 - Puyuhuapi"
+title: "Puyuhuapi"
 date: 2015-01-05
 ---
 

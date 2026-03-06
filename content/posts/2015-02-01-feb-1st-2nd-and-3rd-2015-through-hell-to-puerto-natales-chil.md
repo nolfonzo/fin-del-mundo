@@ -1,5 +1,5 @@
 ---
-title: "Feb 1st, 2nd and 3rd 2015 - Through Hell to Puerto Natales, Chile"
+title: "Through Hell to Puerto Natales, Chile"
 date: 2015-02-01
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Jan 28th, 2015 - El Chalten, Argentina"
+title: "El Chalten, Argentina"
 date: 2015-01-28
 ---
 

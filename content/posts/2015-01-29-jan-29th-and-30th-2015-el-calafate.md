@@ -1,5 +1,5 @@
 ---
-title: "Jan 29th and 30th, 2015 - El Calafate"
+title: "El Calafate"
 date: 2015-01-29
 ---
 
