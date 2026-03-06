@@ -49,6 +49,63 @@
       padding: 0 20px;
     }
 
+    /* Table of Contents */
+    .toc {
+      margin: 50px 0 20px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .toc summary {
+      padding: 16px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #c9a84c;
+      cursor: pointer;
+      list-style: none;
+      background: #222;
+      user-select: none;
+    }
+
+    .toc summary::-webkit-details-marker { display: none; }
+
+    .toc summary::before {
+      content: '▶ ';
+      font-size: 0.75rem;
+    }
+
+    details[open] .toc summary::before {
+      content: '▼ ';
+    }
+
+    .toc-list {
+      padding: 16px 20px;
+      columns: 2;
+      column-gap: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .toc-list { columns: 1; }
+    }
+
+    .toc-list li {
+      list-style: none;
+      margin-bottom: 6px;
+      break-inside: avoid;
+    }
+
+    .toc-list a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-family: Arial, sans-serif;
+    }
+
+    .toc-list a:hover {
+      color: #c9a84c;
+    }
+
     .post {
       padding: 60px 0;
       border-bottom: 1px solid #333;
@@ -62,6 +119,15 @@
       font-size: 1.6rem;
       color: #c9a84c;
       margin-bottom: 6px;
+    }
+
+    .post h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .post h2 a:hover {
+      text-decoration: underline;
     }
 
     .post-meta {
@@ -107,13 +173,24 @@
   </div>
 
   <div class="container">
+
+    <details class="toc">
+      <summary>Table of Contents</summary>
+      <ul class="toc-list">
+        {{ range (where .Site.RegularPages "Section" "posts").ByDate }}
+        <li><a href="#{{ .File.ContentBaseName }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </details>
+
     {{ range (where .Site.RegularPages "Section" "posts").ByDate }}
-    <div class="post">
-      <h2>{{ .Title }}</h2>
+    <div class="post" id="{{ .File.ContentBaseName }}">
+      <h2><a href="#{{ .File.ContentBaseName }}">{{ .Title }}</a></h2>
       <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
       <div class="post-content">{{ .Content }}</div>
     </div>
     {{ end }}
+
   </div>
 
   <footer>Puerto Montt → Ushuaia, December 2014 – February 2015</footer>
