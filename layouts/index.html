@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -164,6 +165,62 @@
       font-size: 0.85rem;
     }
 
+    /* Map button next to Strava links */
+    .map-btn {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      background: #c9a84c;
+      color: #1a1a1a;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+    .map-btn:hover { background: #e0be6a; }
+
+    /* Map modal */
+    #map-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    #map-modal.open { display: flex; }
+    #map-modal-inner {
+      position: relative;
+      width: 90vw;
+      max-width: 860px;
+      height: 70vh;
+      background: #111;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    #map-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      line-height: 32px;
+      text-align: center;
+    }
+    #map-div { width: 100%; height: 100%; }
+
     #translate-btn {
       position: fixed;
       top: 24px;
@@ -234,6 +291,66 @@
     }
   </script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Map modal -->
+  <div id="map-modal">
+    <div id="map-modal-inner">
+      <button id="map-modal-close" onclick="closeMap()">✕</button>
+      <div id="map-div"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+  <script>
+    var activeMap = null;
+
+    function openMap(activityId) {
+      var modal = document.getElementById('map-modal');
+      modal.classList.add('open');
+
+      if (activeMap) { activeMap.remove(); activeMap = null; }
+
+      var map = L.map('map-div');
+      activeMap = map;
+
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri'
+      }).addTo(map);
+
+      new L.GPX('/gpx/' + activityId + '.gpx', {
+        async: true,
+        marker_options: { startIconUrl: null, endIconUrl: null, shadowUrl: null },
+        polyline_options: { color: '#c9a84c', weight: 3, opacity: 0.9 }
+      }).on('loaded', function(e) {
+        map.fitBounds(e.target.getBounds());
+      }).addTo(map);
+    }
+
+    function closeMap() {
+      document.getElementById('map-modal').classList.remove('open');
+      if (activeMap) { activeMap.remove(); activeMap = null; }
+    }
+
+    // Close modal on backdrop click
+    document.getElementById('map-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeMap();
+    });
+
+    // Inject map buttons next to every Strava activity link
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href*="strava.com/activities/"]').forEach(function(link) {
+        var m = link.href.match(/strava\.com\/activities\/(\d+)/);
+        if (!m) return;
+        var id = m[1];
+        var btn = document.createElement('button');
+        btn.className = 'map-btn';
+        btn.textContent = '🗺 Map';
+        btn.onclick = function(e) { e.preventDefault(); openMap(id); };
+        link.parentNode.insertBefore(btn, link.nextSibling);
+      });
+    });
+  </script>
 
 </body>
 </html>
